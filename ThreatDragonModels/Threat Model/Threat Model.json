@@ -384,8 +384,8 @@
                 "text": "Auth Service"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -482,12 +482,47 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "4358bf2e-e5cb-421b-9cf0-dc67ed90f26b",
+                  "title": "تلاش‌های مکرر برای ورود ",
+                  "status": "Open",
+                  "severity": "Low",
+                  "type": "Denial of service",
+                  "description": "باعث کندی سیستم می شود",
+                  "mitigation": "1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "2"
+                },
+                {
+                  "id": "0b0e41ca-662d-433f-ada7-ab2eae584778",
+                  "title": "استفاده از رمز عبور ضعیف",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "مهاجم میتواند با حدس زدن رمز وارد حساب  می‌شود",
+                  "mitigation": "استفاده از رمزعبوز قوی\nمحدود کردن به ورود دو مرحله ای",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 1,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -845,6 +880,6 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 11
+    "threatTop": 13
   }
 }
