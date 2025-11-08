@@ -139,13 +139,6 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -162,8 +155,8 @@
                 "text": "Server"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -260,12 +253,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": true,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "4b8bb104-c003-4c2b-8f5a-4c4f87b6cc90",
+                  "title": "جعل توکن احراز هویت",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "استفاده از توکن‌های سرقت‌شده برای ورود",
+                  "mitigation": "استفاده از توکن زمان داز",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -402,8 +417,8 @@
                 "text": "Client "
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -500,9 +515,27 @@
               "isTrustBoundary": false,
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "providesAuthentication": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "b14024d4-9708-4f08-8fb7-f2de5611db55",
+                  "title": "جعل شماره تلفن",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Spoofing",
+                  "description": "مهاجم خود را به جای کاربر واقعی جا می‌زند",
+                  "mitigation": "1",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "repudiation": 0
+              }
             }
           },
           {
@@ -609,7 +642,17 @@
                 "x": 650,
                 "y": 280
               }
-            ]
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
+            }
           },
           {
             "shape": "flow",
@@ -654,7 +697,13 @@
             "target": {
               "cell": "a466da81-8814-4795-9b22-e8141e76a940",
               "port": "dc8dfc0c-219f-4d03-a87e-26d4471c5df2"
-            }
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 360
+              }
+            ]
           },
           {
             "shape": "trust-boundary-curve",
@@ -681,6 +730,52 @@
               "x": 30,
               "y": 400
             }
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Data Flow",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "Data Flow"
+            ],
+            "id": "69ff6f50-3f73-4757-a946-06f7ae3c7688",
+            "source": {
+              "cell": "11580372-ec9c-4123-aa2a-cfe639118274",
+              "port": "f225c962-adbe-482b-90e8-0dfd03ff9b36"
+            },
+            "target": {
+              "x": 480,
+              "y": 230
+            },
+            "vertices": []
           }
         ]
       },
@@ -714,6 +809,6 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 3
   }
 }
