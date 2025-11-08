@@ -41,6 +41,7 @@
             },
             "visible": true,
             "shape": "store",
+            "zIndex": 1,
             "ports": {
               "groups": {
                 "top": {
@@ -124,7 +125,6 @@
               ]
             },
             "id": "a466da81-8814-4795-9b22-e8141e76a940",
-            "zIndex": 1,
             "data": {
               "type": "tm.Store",
               "name": "database",
@@ -139,11 +139,18 @@
               "storesCredentials": false,
               "storesInventory": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
             "position": {
-              "x": 470,
+              "x": 480,
               "y": 160
             },
             "size": {
@@ -162,6 +169,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 2,
             "ports": {
               "groups": {
                 "top": {
@@ -245,7 +253,6 @@
               ]
             },
             "id": "11580372-ec9c-4123-aa2a-cfe639118274",
-            "zIndex": 2,
             "data": {
               "type": "tm.Process",
               "name": "Server",
@@ -256,7 +263,7 @@
               "hasOpenThreats": false,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
-              "isWebApplication": false,
+              "isWebApplication": true,
               "privilegeLevel": "",
               "threats": []
             }
@@ -282,6 +289,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 3,
             "ports": {
               "groups": {
                 "top": {
@@ -365,7 +373,6 @@
               ]
             },
             "id": "683ff76d-b7c8-43f7-b210-1a0a97ef1356",
-            "zIndex": 3,
             "data": {
               "type": "tm.Process",
               "name": "Auth Service",
@@ -402,6 +409,7 @@
             },
             "visible": true,
             "shape": "actor",
+            "zIndex": 4,
             "ports": {
               "groups": {
                 "top": {
@@ -485,7 +493,6 @@
               ]
             },
             "id": "45665f24-d65f-4ab8-b940-c744dd8713e8",
-            "zIndex": 4,
             "data": {
               "type": "tm.Actor",
               "name": "Client ",
@@ -596,7 +603,8 @@
             "target": {
               "cell": "683ff76d-b7c8-43f7-b210-1a0a97ef1356",
               "port": "f225c962-adbe-482b-90e8-0dfd03ff9b36"
-            }
+            },
+            "vertices": []
           },
           {
             "shape": "flow",
@@ -642,6 +650,32 @@
               "cell": "a466da81-8814-4795-9b22-e8141e76a940",
               "port": "dc8dfc0c-219f-4d03-a87e-26d4471c5df2"
             }
+          },
+          {
+            "shape": "trust-boundary-curve",
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Boundary",
+              "name": "Trust Boundary",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            },
+            "labels": [
+              "Trust Boundary"
+            ],
+            "id": "11da4822-e181-4f72-b807-8028ebf7c369",
+            "source": {
+              "x": 480,
+              "y": 10
+            },
+            "target": {
+              "x": 30,
+              "y": 400
+            }
           }
         ]
       },
@@ -675,6 +709,6 @@
     ],
     "diagramTop": 4,
     "reviewer": "",
-    "threatTop": 0
+    "threatTop": 1
   }
 }
