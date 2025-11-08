@@ -580,7 +580,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "HTTPS",
+              "name": "REST API",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -593,7 +593,7 @@
               "threats": []
             },
             "labels": [
-              "HTTPS"
+              "REST API"
             ],
             "id": "c68673b0-516b-4e08-a05d-412dbae80ee1",
             "source": {
@@ -604,7 +604,12 @@
               "cell": "683ff76d-b7c8-43f7-b210-1a0a97ef1356",
               "port": "f225c962-adbe-482b-90e8-0dfd03ff9b36"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 650,
+                "y": 280
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -626,7 +631,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "SQL",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -639,7 +644,7 @@
               "threats": []
             },
             "labels": [
-              "Data Flow"
+              "SQL"
             ],
             "id": "c71d715b-0704-4ec8-87a5-0c581ec53cd8",
             "source": {
